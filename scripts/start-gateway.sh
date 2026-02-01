@@ -46,7 +46,14 @@ EOFNODE
 
 # Start the gateway
 echo "Starting OpenClaw Gateway..."
-# Use the flags from the sample: --allow-unconfigured --bind lan (or 0.0.0.0)
+
+# Debug: list files to find entrypoint
+echo "DEBUG CWD: $(pwd)"
+echo "DEBUG LS:"
+ls -F || echo "ls failed"
+echo "DEBUG FIND index.js:"
+find / -name "index.js" -maxdepth 4 2>/dev/null || echo "find failed"
+
 # We use the env var for token as well just in case config is ignored
 exec node dist/index.js gateway \
     --port 18789 \
