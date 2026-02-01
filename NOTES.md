@@ -31,3 +31,7 @@
 ```bash
 wsl sshpass -p 'uvgQi31gOMinJRvmHx' ssh root@172.16.69.235 "cd /root/OpenClaw && ./deploy.sh"
 ```
+
+6.  **Permission Denied (EACCES)**:
+    - *Issue*: Gateway crashed or rejected connections due to inability to write to .openclaw/devices volume.
+    - *Resolution*: Chowned the mapped volume directories to 1000:1000 (Node user).
