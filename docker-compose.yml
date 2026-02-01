@@ -27,6 +27,7 @@ services:
         "--port",
         "${OPENCLAW_GATEWAY_PORT:-18789}",
         "--allow-unconfigured",
+        "--verbose",
       ]
 
   openclaw-cli:
