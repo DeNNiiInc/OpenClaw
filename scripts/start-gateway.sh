@@ -55,9 +55,12 @@ echo "DEBUG FIND index.js:"
 find / -name "index.js" -maxdepth 4 2>/dev/null || echo "find failed"
 
 # We use the env var for token as well just in case config is ignored
-exec node dist/index.js gateway \
-    --port 18789 \
-    --verbose \
-    --allow-unconfigured \
-    --bind 0.0.0.0 \
-    --token "$OPENCLAW_GATEWAY_TOKEN"
+echo "DEBUG: Sleeping for manual inspection..."
+sleep infinity
+
+# exec node dist/index.js gateway \
+#    --port 18789 \
+#    --verbose \
+#    --allow-unconfigured \
+#    --bind 0.0.0.0 \
+#    --token "$OPENCLAW_GATEWAY_TOKEN"
